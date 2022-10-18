@@ -1,7 +1,7 @@
 package com.example.diceroller
 
+import com.example.diceroller.data.Dice
 import org.junit.Test
-
 import org.junit.Assert.*
 
 /**
@@ -11,7 +11,8 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun generates_number() {
+        val diceRoll = Dice(6).roll()
+        assertTrue("Dice value not between 1 and 6", diceRoll in 1..6)
     }
 }
